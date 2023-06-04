@@ -55,6 +55,12 @@ string keyAdjustment (string &msg, string &key)
     if (i == key.size())
       i = 0;
   }
+ 
+  //Creating new key if key is bigger than the message
+  while (key.size() > msg.size())
+  {
+    key.pop_back();
+  }
   
   //inserting spaces into key
   for (int i = 0; i < msg.size(); i++)
